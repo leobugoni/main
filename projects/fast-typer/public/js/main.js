@@ -41,25 +41,37 @@ esconderDivMenu.on("click",function (){
 });
 
 
+$("#mario-chao").show();
+$("#mario-pulando").hide();
 
-var personagemPular = $(".botao-pular");
-personagemPular.on("click",function(){
-  if($('.pular').is(':visible')){
-    console.log("Devo estar no chao");
-  }else{
-    $(".pular").show();
-    console.log("Devo estar no ar");
-  }
-  var tempoPulo = 1;
-  var pulo = setInterval(function(){
-    tempoPulo--;
-    if (tempoPulo == 0) {
-      console.log("meu tempo de pulo acabou");
-      clearInterval(pulo)
-      $(".pular").hide();
+window.addEventListener('keypress', function(e) {
+  var codigoTecla = e.which || e.keyCode || 0;
+  var space = codigoTecla == 32;
+  if (space) console.log('O space foi pressionado!');
+if(space){
+  $("#mario-chao").show();
+  $("#mario-pulando").hide();
+  console.log("Chao");
+} else{
+  $("#mario-chao").hide();
+  $("#mario-pulando").show();
+  console.log("Pulando");
+}
+
+tempoPulo = 1;
+var tempoPulo = setInterval(function(){
+  tempoPulo--;
+  $("#mario-pulando").text(tempoPulo);
+    if(tempoPulo <= 0){
+      $("#mario-pulando").hide();
+      clearInterval(tempoPulo);
     }
-  },350);
+  console.log(tempoPulo);
+},350);
+
 });
+
+
 
 
 
