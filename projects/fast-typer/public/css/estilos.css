@@ -1,45 +1,46 @@
-.body {
-  background-color: cyan;
-
+.frase{
+  font-size: 18px;
+  text-align: left;
+}
+.campo-digitacao{
+  font-size: 18px;
+  border-radius: 5px;
+  height: 130px;
+  background-color: #fff;
+  border-color: #aeaeae;
+  outline:none;
+  text-align: center;
+}
+.campo-digitacao:disabled{
+  background-color: #ffe6e5;
+  border-color: #ff0000;
+  text-align: center;
+}
+body{
+  background-color: #e6feff;
+}
+.icones{
+  vertical-align: middle;
 }
 
-.game{
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  background-color: cyan;
+.campo-correto{
+  color: green;
 }
-#mario-chao{
-  height: 35px;
-  margin-top: 15px;
-  position: relative;
-  margin-left: 50px;
+.campo-errado{
+  color: red;
 }
-
-#mario-pulando{
-  height: 35px;
-  position: relative;
-  margin-left: 50px;
-}
-
-.pular{
-  width: 50px;
+.input-desafio{
+  text-align: middle;
+  border-radius: 5px;
+  background-color: #fff;
+  border-color: #aeaeae;
+  outline:none;
+  text-align: center;
+  font-size: 18px;
   height: 50px;
-  display: none;
-  position: static;
-  margin-left: 50px;
 }
-
-.grass{
-  background-color: #268923;
-  width: 100;
-  height: 8px;
-  border-radius: 5px 5px 0px 0px;
-  position: static;
-  }
-.earth{
-  width: 100;
-  height: 20px;
-  background-color: #854c2d;
-  bottom: 0px;
+.container-frase{
+  background-color: #88d2ff;
+  padding:10px;
+  margin: 20px 0px 20px 0px;
 }
