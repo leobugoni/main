@@ -6,27 +6,36 @@
   <link rel="stylesheet" type="text/css" href="css/libs/materialize.min.css"/>
   <link rel="stylesheet" href="css/libs/google-fonts.css"/>
   <link rel="stylesheet" type="text/css" href="css/estilos.css"/>
+  <link rel="stylesheet" type="text/css" href="css/padding.leo.css"/>
+  <link rel="stylesheet" type="text/css" href="css/margin.leo.css"/>
 </head>
 <body>
+    <nav>
+      <div class="nav-wrapper blue darken-4 pad-l-30">
+        <a href="#!" class=" left brand-logo left"><i class="material-icons left">cloud</i>The Project</a>
+        <ul class="right pad-r-30 hide-on-med-and-down">
+          <li><a href="#"><i class="material-icons">search</i></a></li>
+          <li><a href="#"><i class="material-icons">view_module</i></a></li>
+          <li><a href="#"><i class="material-icons">refresh</i></a></li>
+          <li><a href="#"><i class="material-icons">more_vert</i></a></li>
+        </ul>
+      </div>
+    </nav>
+
     <div class="container">
       <h1 class="center">Fast Typer</h1>
       </div>
     <div class="container-frase">
       <div class="container row">
-
         <div class="col s9 frase-div">
         <textarea placeholder="Cole aqui a frase do desafio" class="input-desafio" id="frase-digitar"></textarea>
         </div>
-
         <div class="col s2 tempo-div">
           <textarea id="tempo-jogo" class="input-desafio" placeholder="Tempo"></textarea>
-          
         </div>
-
         <div class="col s1 botoes">
           <a class="btn-floating btn-large waves-effect waves-light blue darken-4"><i class="material-icons" id="botao-salvar">done</i></a>
         </div>
-      
         <div class="col s12 box-frase">
         <p class="frase center"></p>
         </div>
@@ -43,7 +52,6 @@
         <span id="tempo-digitacao">0</span> segundos
       </li>
     </ul>
-
     <div class="row">
       <div class="col s11 input-digitacao">
         <textarea class="campo-digitacao"></textarea>
@@ -59,11 +67,6 @@
       <li><span id="contador-caracteres">0</span> caracteres</li>
       <li><span id="contador-palavras">0</span> palavras</li>
     </ul>
-
-
-
-
-
     <section class="placar">
       <h4 class="center">Placar</h4>
         <table class="centered bordered">
@@ -75,22 +78,16 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Leonardo</td>
-              <td>5</td>
-              <td><a href="#" class="botao-excluir"><i class="small material-icons">delete</i></a></td>
-            </tr>
           </tbody>
         </table>
-      
-
     </section>
-
-
-
-
     </div>
   <script src="js/jquery.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/placar.js"></script>
+  <script src="js/w3.js"></script>
+  <script>
+    w3.includeHTML();
+  </script>
 </body>
 </html>

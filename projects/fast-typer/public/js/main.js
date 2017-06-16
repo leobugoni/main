@@ -2,12 +2,8 @@ let campo = $(".campo-digitacao");
 
 $(function(){
   $("#botao-salvar").click(iniciaJogo);
-
   inicializaContadores();
-
-
   $("#botao-reiniciar").click(reiniciaJogo);
-
   campo.attr("placeholder", "Insira uma frase e defina o tempo para começar");
 });
 
@@ -54,7 +50,6 @@ function inicializaCronometro() {
       $("#tempo-digitacao").text(tempoRestante);
       if (tempoRestante < 1) {
         clearInterval(cronometroID);
-        console.log("entrou");
         finalizaJogo();
       }
     }, 1000);
@@ -105,7 +100,7 @@ function reiniciaJogo(){
 }
 
 function pausaJogo() {
-  //TODO fazer função para pausar o jogo
+  //TODO fazer função para pausar o jogo, calcular tempo e ppm
 }
 
 function finalizaJogo(){
@@ -114,34 +109,3 @@ function finalizaJogo(){
   campo.attr("placeholder", "TEMPO ESGOTADO");
   inserePlacar();
 }
-
-function inserePlacar(){
-  let corpoTabela = $(".placar").find("tbody");
-  let usuario = "Leonardo";
-  let numPalavras = $("#contador-palavras").text();
-  let botaoExcluir = "<a href='#''><i class='small material-icons'>delete</i></a>";
-  let linha = novaLinha();
-
-  corpoTabela.prepend(linha);
-}
-
-function novaLinha(usuario, palavras) {
-  let linha = $("<tr>");
-  let colunaUsuario = $("<td>").text(usuario);
-  let colunaPalavra = $("<td>").text(palavras);
-  let colunaExcluir = $("<td>");
-  let link = $("<a>").addClass("botao-excluir").attr("href", "#");
-  let icone = $("<i>").addClass("small material-icons").text("delete");
-  link.append(icone);
-  colunaExcluir.append(link);
-  linha.append(colunaUsuario);
-  linha.append(colunaPalavra);
-  linha.append(colunaExcluir);
-
-}
-
-
-$(".botao-excluir").click(function(event){
-  event.preventDefault();
-  $(this).parent().parent().remove();
-});
