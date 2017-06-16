@@ -10,11 +10,13 @@
   border-color: #aeaeae;
   outline:none;
   text-align: center;
+  resize: none;
 }
 .campo-digitacao:disabled{
   background-color: #ffe6e5;
   border-color: #ff0000;
   text-align: center;
+  resize: none;
 }
 body{
   background-color: #e6feff;
@@ -38,9 +40,38 @@ body{
   text-align: center;
   font-size: 18px;
   height: 50px;
+  resize: none;
+
 }
 .container-frase{
   background-color: #88d2ff;
-  padding:10px;
+  padding-top:10px;
+  padding-bottom:10px;
   margin: 20px 0px 20px 0px;
+}
+
+.placar{
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #b4b4b4;
+}
+.box-frase{
+  margin-top: 25px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #b4b4b4; 
+  min-height: 50px;
+}
+
+.btn-margin{
+  margin: 5px;
+}
+.botoes{
+  margin-left: -14px;
 }
