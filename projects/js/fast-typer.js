@@ -109,3 +109,6 @@ function finalizaJogo(){
   campo.attr("placeholder", "TEMPO ESGOTADO");
   inserePlacar();
 }
+
+let titulo = $("LOCAL DO TITULO NOVO").text();
+$("#titulo").text(titulo);
